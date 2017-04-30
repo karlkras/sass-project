@@ -6,7 +6,7 @@ var plumber = require('gulp-plumber');
 var sourcemaps = require('gulp-sourcemaps');
 
 var CSS_DIST_PATH = 'css/';
-var SCSS_PATH = 'scss/*.scss';
+var SCSS_PATH = 'scss/**/*.scss';
 
 gulp.task('sass', () => {
     return gulp.src(SCSS_PATH)
