@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var livereload = require('gulp-livereload');
-var autoprefixer = require('gulp-autoprefixer');
 var plumber = require('gulp-plumber');
 var sourcemaps = require('gulp-sourcemaps');
 
@@ -16,7 +15,6 @@ gulp.task('sass', () => {
             this.emit('end');
         }))
         .pipe(sourcemaps.init())
-        .pipe(autoprefixer())
         .pipe(sass({
             //outputStyle: 'compressed'
         }))
