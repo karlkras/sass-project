@@ -12,6 +12,11 @@
 
 @include fancy-links;
 
+.warning-button {
+  @include warning;
+  padding: 8px 12px;
+}
+
 body {
   font-family: sans-serif;
   color: $text-color;
@@ -20,11 +25,8 @@ body {
     font-size: 125%;
   }
 }
-
-
 h1, h2, h3, h4 {
   font-family: $headline-font;
-  
 }
 
 h2 {
@@ -33,34 +35,16 @@ h2 {
 
 p {
   font-family: $text-font;
-  
+
 }
 
 a {
   color: $link-color;
 
-}
+  &:hover {
+    color: darken($link-color, 15%);
+  }
 
-.warning-button {
-  @include warning;
-  padding: 8px 12px;
-}
-
-body {
-  font-family: $text-font;
-  color: $text-color;
-}
-
-h1, h2, h3, h4 {
-  font-family: $headline-font!important;
-}
-
-p {
-  font-family: $text-font;
-}
-
-a {
-  color: $link-color;
 }
 
 #header {
@@ -76,6 +60,13 @@ a {
     }
     a {
       color: $menu-item-color;
+      padding: 6px 8px;
+      border-bottom: 1px solid transparentize(#fefefe, 1);
+      transition: border-bottom 0.5s;
+      transition-timing-function: ease-in-out;
+      &:hover {
+        border-bottom: 1px solid opacify(#fefefe, .5);
+      }
     }
   }
   
